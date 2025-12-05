@@ -5,40 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>JP Tour</title>
-
-    <style>
-      .slide {
-        transition: opacity 0.8s ease-in-out;
-      }
-    </style>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <!-- NAV -->
     <nav id="navbar" class="fixed z-20 top-0 left-0 w-full flex justify-between items-center px-6 py-5 transition-all duration-300">
-      <!-- Menu Button -->
       <button id="menuBtn" class="w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md rounded-full text-white">☰</button>
-
-      <!-- Logo -->
       <div class="flex items-center justify-center">
-        <div>
-          <img src="./img/logo.png" class="w-6" />
-        </div>
+        <img src="./img/logo.png" class="w-6" />
       </div>
-
       <div class="w-10"></div>
     </nav>
 
     <!-- SLIDER -->
     <div class="relative w-full h-screen overflow-hidden">
-      <!-- Slides -->
-      <div id="slides">
+      <div id="slides" class="relative w-full h-full">
         <!-- Slide 1 -->
         <div class="slide absolute inset-0 opacity-100">
           <img src="./img/image1.jpg" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-black/40"></div>
-
-          <div class="absolute bottom-20 left-15 md:left-25 max-w-xl text-white">
-            <h1 class="text-5xl font-serif mb-4">Explore Japan With Ease<br />And Peace Of Mind</h1>
+          <div class="absolute bottom-16 left-6 md:left-12 max-w-xl text-white pr-4">
+            <h1 class="text-4xl md:text-5xl font-serif mb-4 leading-tight">Explore Japan With Ease<br />And Peace Of Mind</h1>
             <p class="mb-6 text-md md:text-lg">JT0UR helps you enjoy Japan effortlessly—from curated food recommendations to knowledgeable guides and authentic local spots.</p>
             <button class="px-6 py-3 bg-pink-600 rounded-full hover:bg-pink-700">Explore Japan Tours</button>
           </div>
@@ -48,10 +34,9 @@
         <div class="slide absolute inset-0 opacity-0">
           <img src="./img/image2.jpg" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-black/40"></div>
-
-          <div class="absolute bottom-20 left-15 md:left-25 max-w-xl text-white">
-            <h1 class="text-5xl font-serif mb-4">Discover<br />With Local Experts</h1>
-            <p class="mb-6 text-lg">Visit secret temples, tea houses, and quiet streets only locals know.</p>
+          <div class="absolute bottom-16 left-6 md:left-12 max-w-xl text-white pr-4">
+            <h1 class="text-4xl md:text-5xl font-serif mb-4 leading-tight">Discover<br />With Local Experts</h1>
+            <p class="mb-6 text-md md:text-lg">Visit secret temples, tea houses, and quiet streets only locals know.</p>
             <button class="px-6 py-3 bg-pink-600 rounded-full hover:bg-pink-700">See Kyoto Plans</button>
           </div>
         </div>
@@ -60,42 +45,30 @@
         <div class="slide absolute inset-0 opacity-0">
           <img src="./img/image3.jpg" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-black/40"></div>
-
-          <div class="absolute bottom-20 left-15 md:left-25 max-w-xl text-white">
-            <h1 class="text-5xl font-serif mb-4">Experience Tokyo<br />In A New Way</h1>
-            <p class="mb-6 text-lg">Explore vibrant districts, unique cafes, and futuristic cityscapes with ease.</p>
+          <div class="absolute bottom-16 left-6 md:left-12 max-w-xl text-white pr-4">
+            <h1 class="text-4xl md:text-5xl font-serif mb-4 leading-tight">Experience Tokyo<br />In A New Way</h1>
+            <p class="mb-6 text-md md:text-lg">Explore vibrant districts, unique cafes, and futuristic cityscapes with ease.</p>
             <button class="px-6 py-3 bg-pink-600 rounded-full hover:bg-pink-700">Explore Tokyo</button>
           </div>
         </div>
       </div>
 
-      <!-- Prev -->
-      <button id="prev" class="absolute left-5 top-1/2 w-12 h-12 rounded-full text-white text-2xl flex items-center justify-center">←</button>
-
-      <!-- Next -->
-      <button id="next" class="absolute right-5 top-1/2 w-12 h-12 rounded-full text-white text-2xl flex items-center justify-center">→</button>
+      <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-black/30 rounded-full text-white text-2xl flex items-center justify-center">←</button>
+      <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-black/30 rounded-full text-white text-2xl flex items-center justify-center">→</button>
     </div>
     <!-- section 1 -->
-    <section class="bg-gradient-to-b from-pink-50 via-pink-100 to-white flex items-center justify-center p-6">
-      <div class="outer-frame w-full max-w-5xl bg-transparent p-6">
-        <div class="relative bg-transparent rounded-md p-6">
-          <div class="grid md:grid-cols-2 items-center">
-            <!-- FOTO -->
-            <div class="flex justify-center md:justify-start relative">
-              <div class="absolute top-1 left-1 w-72 md:w-80 h-72 md:h-80 bg-pink-300 rounded-3xl"></div>
-              <div class="w-72 md:w-80 h-72 -rotate-5 md:h-80 rounded-3xl overflow-hidden shadow-xl relative z-10">
-                <img src="./img/image3.jpg" alt="Travel Image" class="w-full h-full object-cover" />
+    <section class="bg-gradient-to-b from-pink-50 via-pink-100 to-white flex items-center justify-center p-6 overflow-hidden">
+      <div class="outer-frame w-full max-w-5xl p-6">
+        <div class="relative rounded-md p-6">
+          <div class="grid md:grid-cols-2 items-center gap-6">
+            <div class="flex justify-center md:justify-start relative overflow-hidden">
+              <div class="absolute top-2 left-2 w-64 md:w-80 h-64 md:h-80 bg-pink-300 rounded-3xl"></div>
+              <div class="w-64 md:w-80 h-64 md:h-80 -rotate-3 rounded-3xl overflow-hidden shadow-xl relative z-10">
+                <img src="./img/image3.jpg" class="w-full h-full object-cover" />
               </div>
             </div>
-
-            <!-- KANAN: teks -->
             <div class="flex items-center">
-              <div>
-                <p class="text-amber-400/90 md:text-[1.1rem] text-lg leading-relaxed md:leading-loose font-medium tracking-wide mt-14 md:mt-0" style="color: #f08b8b">
-                  JTOUR delivers thoughtfully crafted travel experiences across Japan and nearby destinations, combining smooth itineraries, trusted guidance, and Muslim-friendly considerations so every journey feels easy, meaningful, and
-                  true to your lifestyle.
-                </p>
-              </div>
+              <p class="text-lg leading-relaxed text-rose-400 mt-10 md:mt-0">JTOUR delivers thoughtfully crafted travel experiences across Japan and nearby destinations... tailored to your lifestyle.</p>
             </div>
           </div>
         </div>
@@ -443,54 +416,51 @@
       </div>
     </section>
     <!-- Footer -->
-    <section class="relative w-full h-[380px] flex items-center">
-      <!-- BACKGROUND IMAGE -->
+    <section class="relative w-full h-auto md:h-[460px] px-4 md:px-10 py-10 overflow-x-hidden md:overflow-hidden flex items-end pb-16">
+      <!-- Background image -->
       <div class="absolute inset-0">
-        <img src="./img/image3.jpg" class="w-full h-full object-cover" />
+        <img src="./img/image3.jpg" class="w-full h-full object-cover object-center" />
       </div>
 
-      <!-- DARK OVERLAY -->
-      <div class="absolute inset-0 bg-black/50"></div>
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-black/40"></div>
 
-      <!-- LARGE TEXT BEHIND -->
-      <h1 class="absolute inset-0 flex items-center justify-center text-white/20 text-7xl md:text-8xl font-bold tracking-wider pointer-events-none">JAPANTOURS</h1>
+      <!-- Giant background text -->
+      <h1 class="absolute inset-0 flex items-center justify-center text-white/10 text-[60px] sm:text-[80px] md:text-[170px] font-extrabold tracking-normal md:tracking-[0.25em] pointer-events-none select-none">JAPANTOURS</h1>
 
-      <!-- CONTENT -->
-      <div class="relative z-10 w-full max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-white">
-        <!-- LEFT: LOGO -->
-        <div>
-          <div class="flex items-center gap-3 mb-5">
-            <!-- LOGO ICON -->
-            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-              <span class="text-xl font-bold">≋</span>
-            </div>
-            <span class="text-xl font-semibold">JTOUR</span>
+      <!-- Footer content -->
+      <div class="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-white">
+        <!-- LEFT: LOGO & COPYRIGHT -->
+        <div class="flex flex-col justify-end order-last md:order-none">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="./img/logo.png" alt="logo" class="w-8 h-8" />
+            <span class="text-xl font-semibold tracking-wide">JTOUR</span>
           </div>
 
-          <p class="text-gray-300 text-sm">© 2025, JTOUR – All Rights Reserved</p>
+          <p class="text-gray-200 text-sm">© 2025, JTOUR – All Rights Reserved</p>
         </div>
 
         <!-- MIDDLE: NAVIGATION -->
-        <div>
+        <div class="flex flex-col justify-end">
           <h3 class="text-lg font-semibold mb-3">Navigations</h3>
-          <ul class="text-gray-300 space-y-2">
-            <li><a href="#" class="hover:text-white">Home</a></li>
-            <li><a href="#" class="hover:text-white">Charging solutions</a></li>
-            <li><a href="#" class="hover:text-white">Technology</a></li>
-            <li><a href="#" class="hover:text-white">Contact us</a></li>
+          <ul class="text-gray-200 space-y-2">
+            <li><a href="#" class="hover:text-white duration-150">Home</a></li>
+            <li><a href="#" class="hover:text-white duration-150">Charging solutions</a></li>
+            <li><a href="#" class="hover:text-white duration-150">Technology</a></li>
+            <li><a href="#" class="hover:text-white duration-150">Contact us</a></li>
           </ul>
         </div>
 
         <!-- RIGHT: NEWSLETTER -->
-        <div>
+        <div class="flex flex-col justify-end">
           <h3 class="text-lg font-semibold mb-3">Subscribe to Newsletter</h3>
 
           <div class="flex bg-white rounded-full overflow-hidden shadow w-full">
             <input type="email" placeholder="Email Address" class="px-4 py-2 w-full text-gray-700 outline-none" />
-            <button class="px-5 py-2 bg-gradient-to-r from-pink-400 to-rose-500 text-white text-sm font-medium">Subscribe</button>
+            <button class="px-5 py-2 bg-rose-500 hover:bg-rose-600 text-white text-sm font-medium">Subscribe</button>
           </div>
 
-          <div class="flex gap-6 text-gray-300 text-sm mt-4">
+          <div class="flex gap-6 text-gray-200 text-sm mt-4">
             <a href="#" class="hover:text-white">Terms of Service</a>
             <a href="#" class="hover:text-white">Privacy Policy</a>
           </div>
